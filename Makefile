@@ -1,5 +1,5 @@
 ana:
-	git config --global user.email 20233005268@estudantes.ifpr.edu.br
+	git config --global user.email ana.luiza.kauffman@gmail.com
 	git config --global user.name ana luiza
 
 sara:

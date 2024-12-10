@@ -100,18 +100,20 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
         monstro.setAltura(peso);
 
         System.out.println("\nDano: ");
-        int ltura = LER.nextFloat();
+        int dano = LER.nextInt();
+        monstro.setAltura(dano);
+
+        System.out.println("\nVelocidade (km/h): ");
+        int velocidade = LER.nextInt();
         monstro.setAltura(altura);
 
-        do {
-            nota = LER.nextInt();
-            cantor.setPersonalidade(nota);
+        System.out.println("\nOrigem: ");
+        String origem = LER.nextLine();
+        monstro.(origem);
 
-            if (nota < 0 || nota > 5) {
-                System.out.println("um erro ocorreu, digite novamente");
-            }
-            
-        } while (nota < 0 || nota > 5);
+        System.out.println("\nFamília/Clã: ");
+        float altura = LER.nextFloat();
+        monstro.setAltura(altura);
 
         LER.nextLine();
 
