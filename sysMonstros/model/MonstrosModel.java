@@ -24,6 +24,10 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
         this.cla = cla;
     }
 
+    public MonstrosModel() {
+
+    }
+
     public String getEspecie() {
         return this.especie;
     }
@@ -120,4 +124,12 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
     public int compareTo(MonstrosModel outro) {
         return this.especie.compareToIgnoreCase(outro.getEspecie());
     }
+
+    @Override
+    public String toString() {
+        return ("Espécie: " + especie + "\n" + "Fraqueza: " + fraqueza + "\n" + "Altura: " + altura + " metros\n"
+                + "Dano: " + dano + "\n" + "Velocidade: " + velocidade + " km/h\n" + "Origem: " + origem + "\n"
+                + "Clã: " + cla);
+    }
+
 }

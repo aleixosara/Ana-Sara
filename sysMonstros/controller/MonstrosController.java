@@ -33,7 +33,7 @@ public class MonstrosController {
                     buscarEspecie();
                     break;
                 case 4:
-                    ordenarPorEspecie();
+                    ordenarPorDano();
                     break;
                 case 5:
                     view.mostrarMensagem("Encerrando o programa");
@@ -67,7 +67,7 @@ public class MonstrosController {
         view.mostrarMonstro(monstroEncontrado);
     }
 
-    private void ordenarPorEspecie() {
+    private void ordenarPorDano() {
         Collections.sort(monstros);
         view.mostrarLista(monstros);
     }
