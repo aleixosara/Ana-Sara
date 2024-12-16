@@ -14,6 +14,16 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
     private String origem = null;
     private String cla = null;
 
+    public MonstrosModel(String especie, String fraqueza, float altura, int dano, int velocidade, String origem, String cla) {
+        this.especie = especie;
+        this.fraqueza = fraqueza;
+        this.altura = altura;
+        this.dano = dano;
+        this.velocidade = velocidade;
+        this.origem = origem;
+        this.cla = cla;
+    }
+
     public String getEspecie() {
         return this.especie;
     }
