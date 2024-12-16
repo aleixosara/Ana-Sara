@@ -122,7 +122,7 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
 
     @Override
     public int compareTo(MonstrosModel outro) {
-        return this.especie.compareToIgnoreCase(outro.getEspecie());
+        return Integer.compare(this.dano, outro.getDano());
     }
 
     @Override
