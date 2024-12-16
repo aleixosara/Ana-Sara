@@ -1,6 +1,5 @@
 package sysMonstros.model;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MonstrosModel implements Comparable<MonstrosModel> {
@@ -24,7 +23,7 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
     }
 
     public String getFraqueza() {
-        return fraqueza;
+        return this.fraqueza;
     }
 
     public void setFraqueza(String fraqueza) {
@@ -32,13 +31,13 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
     }
 
     public float getAltura() {
-        return altura;
+        return this.altura;
     }
 
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
+
     public int getDano() {
         return this.dano;
     }
@@ -64,7 +63,7 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
     }
 
     public String getCla() {
-        return cla;
+        return this.cla;
     }
 
     public void setCla(String cla) {
@@ -88,11 +87,13 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
 
         System.out.println("\nDano: ");
         int dano = LER.nextInt();
-        monstro.setAltura(dano);
+        monstro.setDano(dano);
 
         System.out.println("\nVelocidade (km/h): ");
         int velocidade = LER.nextInt();
-        monstro.setAltura(altura);
+        monstro.setVelocidade(velocidade);
+
+        LER.nextLine();
 
         System.out.println("\nOrigem: ");
         String origem = LER.nextLine();
@@ -100,15 +101,13 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
 
         System.out.println("\nFamília/Clã: ");
         String cla = LER.nextLine();
-        monstro.setAltura(altura);
-
-        LER.nextLine();
+        monstro.setCla(cla);
 
         return monstro;
     }
 
     @Override
-    public int compareTo(Monstros outro) {
+    public int compareTo(MonstrosModel outro) {
         return this.especie.compareToIgnoreCase(outro.getEspecie());
     }
 }

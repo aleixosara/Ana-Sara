@@ -1,28 +1,18 @@
 package sysMonstros.view;
 
 import javax.swing.*;
-
 import sysMonstros.model.MonstrosModel;
-
 import java.util.ArrayList;
 
 public class MonstrosView {
 
     public int mostrarMenu() {
-        String menu = """
-                Escolha uma opção:
-                1. Adicionar Espécie
-                2. Exibir Todos Os Monstros
-                3. Buscar Monstro Por Espécie
-                4. Ordenar Monstros Por Dano
-                5. Sair
-                """;
+        String menu = ("Escolha uma opção:\n1. Adicionar Espécie\n2. Exibir Todos Os Monstros\n3. Buscar Monstro Por Espécie\n4. Ordenar Monstros Por Dano\n5. Sair");
 
         return Integer.parseInt(JOptionPane.showInputDialog(null, menu, "Menu", JOptionPane.QUESTION_MESSAGE));
     }
 
     public MonstrosModel lerMonstro() {
-
         String especie = JOptionPane.showInputDialog(null, "Espécie:", "Inserir Espécie", JOptionPane.QUESTION_MESSAGE);
         String fraqueza = JOptionPane.showInputDialog(null, "Fraqueza:", "Inserir Fraqueza", JOptionPane.QUESTION_MESSAGE);
         float altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Altura:", "Inserir Altura", JOptionPane.QUESTION_MESSAGE));
@@ -31,7 +21,7 @@ public class MonstrosView {
         String origem = JOptionPane.showInputDialog(null, "Origem:", "Inserir Origem", JOptionPane.QUESTION_MESSAGE);
         String cla = JOptionPane.showInputDialog(null, "Família/Clã:", "Inserir Família/Clã", JOptionPane.QUESTION_MESSAGE);
 
-        MonstrosModel monstro = new MonstroModel(especie, fraqueza, altura, dano, velocidade, origem, cla);
+        MonstrosModel monstro = new MonstrosModel(especie, fraqueza, altura, dano, velocidade, origem, cla);
 
         return monstro;
     }
@@ -54,11 +44,11 @@ public class MonstrosView {
         mostrarMensagem(sb.toString());
     }
 
-    public String buscarEspécie() {
+    public String buscarEspecie() {
         return JOptionPane.showInputDialog(null, "Digite o Nome da Espécie:", "Buscar Espécie", JOptionPane.QUESTION_MESSAGE);
     }
 
-    public void mostrarJedi(MonstrosModel monstro) {
+    public void mostrarMonstro(MonstrosModel monstro) {
         if (monstro == null) {
             mostrarMensagem("Monstro Não Encontrado");
         } else {

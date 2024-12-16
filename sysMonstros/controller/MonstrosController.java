@@ -8,7 +8,7 @@ import sysMonstros.view.MonstrosView;
 
 public class MonstrosController {
 
-    private final ArrayList<MonstrosController> monstros;
+    private final ArrayList<MonstrosModel> monstros;
     private final MonstrosView view;
 
     public MonstrosController(MonstrosView view) {
@@ -56,7 +56,7 @@ public class MonstrosController {
     }
 
     private void buscarEspecie() {
-        String especie = view.solicitarNome();
+        String especie = view.buscarEspecie();
         MonstrosModel monstroEncontrado = null;
         for (MonstrosModel monstro : monstros) {
             if (monstro.getEspecie().equalsIgnoreCase(especie)) {
@@ -64,13 +64,11 @@ public class MonstrosController {
                 break;
             }
         }
-        view.mostrarJedi(monstroEncontrado);
+        view.mostrarMonstro(monstroEncontrado);
     }
 
     private void ordenarPorEspecie() {
-
         Collections.sort(monstros);
-
         view.mostrarLista(monstros);
     }
 }
