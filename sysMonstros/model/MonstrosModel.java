@@ -127,7 +127,7 @@ public class MonstrosModel implements Comparable<MonstrosModel> {
 
     @Override
     public String toString() {
-        return ("Espécie: " + especie + "\n" + "Fraqueza: " + fraqueza + "\n" + "Altura: " + altura + " metros\n"
+        return ("\nEspécie: " + especie + "\n" + "Fraqueza: " + fraqueza + "\n" + "Altura: " + altura + " metros\n"
                 + "Dano: " + dano + "\n" + "Velocidade: " + velocidade + " km/h\n" + "Origem: " + origem + "\n"
                 + "Clã: " + cla);
     }
